@@ -1,4 +1,4 @@
-import CONFIG from "../../globals/config"
+import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
 <h2 class="restaurant__title">${restaurant.name}</h2>
@@ -17,17 +17,17 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <p>${restaurant.rating}</p>
     <h4>Categories</h4>
     <ul>
-      ${restaurant.categories.map((category) => `<li>${category.name}</li>`).join("")}
+      ${restaurant.categories.map((category) => `<li>${category.name}</li>`).join('')}
     </ul>
     <h4>Menu</h4>
     <div class="restaurant__menu">
       <h5>Food</h5>
       <ul>
-        ${restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join("")}
+        ${restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join('')}
       </ul>
       <h5>Drinks</h5>
       <ul>
-        ${restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join("")}
+        ${restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
       </ul>
     </div>
   </div>
@@ -43,9 +43,9 @@ const createRestaurantDetailTemplate = (restaurant) => `
         <p>${review.review}</p>
         <p><small>${review.date}</small></p>
       </div>
-    `).join("")}
+    `).join('')}
   </div>
-`
+`;
 
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant">
@@ -64,22 +64,22 @@ const createRestaurantItemTemplate = (restaurant) => `
       <p class="restaurant__description">${restaurant.description}</p>
     </div>
   </div>
-`
+`;
 const createLikeButtonTemplate = () => `
   <button aria-label="like this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
-`
+`;
 
 const createLikedButtonTemplate = () => `
   <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
-`
+`;
 
 export {
-    createRestaurantItemTemplate,
-    createRestaurantDetailTemplate,
-    createLikeButtonTemplate,
-    createLikedButtonTemplate,
-}
+  createRestaurantItemTemplate,
+  createRestaurantDetailTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+};
