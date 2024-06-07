@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Apps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Viga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css">
+    <link rel="manifest" href="/app.webmanifest">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"></head>
+<body>
+    <header class="app-bar">
+        <a href="#restaurants" class="skip-link">Skip to Content</a>
+        <div class="app-bar__menu">
+            <button id="hamburgerButton">☰</button>
+          </div>
+          <div class="app-bar__brand">
+            <h1>Restaurant App</h1>
+          </div>      
+        <nav id="navigationDrawer" class="nav app-bar__navigation">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#/home">Home</a></li>
+                <li class="nav__item"><a href="#/like">Favorites</a></li>
+                <li class="nav__item"><a href="https://www.instagram.com/_ulfash/?hl=en">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="jumbotron">
+        <div class="jumbotron__content">
+            <h2>Selamat Datang di Restaurant Apps</h2>
+            <!-- <picture>
+                <source media="(max-width: 600px)" srcset="./images/heros/hero-image_4-small.jpg">
+                <img src='./images/heros/hero-image_4-large.jpg' 
+                     alt="life is strange 2 poster">
+              </picture> -->
+        </div>
+    </div>
+    <main id="mainContent" tabindex="0">
+        <h2 id="restaurants">Daftar Restaurant</h2>
+        <section id="restaurants" class="restaurants"></section>
+        
+        <div id="restaurant-detail-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="restaurant-detail"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__content">
+            <p>&copy; 2024 - Restaurant Apps</p>
+        </div>
+    </footer>
+    <script>
+    </script>
+</body>
+</html>

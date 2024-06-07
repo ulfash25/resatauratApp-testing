@@ -1,0 +1,349 @@
+/* Reset default margin and padding */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Tambahkan box-sizing untuk semua elemen */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CSS untuk Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  display: inline;
+  z-index: 999;
+}
+.skip-link:focus {
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 5px;
+}
+
+/* Header styles */
+header {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+
+.header__menu button#hamburgerButton {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.nav.open {
+  left: 0;
+}
+
+.nav ul li {
+  margin-bottom: 5px;
+}
+
+.nav ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  width: 100%;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+button#hamburgerButton {
+  min-width: 44px;
+  min-height: 44px;
+}
+header .app-bar__brand h1{
+  color: #db0000;
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+  padding-top: 10px;
+}
+
+/* Main Content styles */
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+}
+.restaurant__title a{
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+  /* background-image: url("../public/images/heros/hero-image_4.jpg"); */
+/* Jumbotron Styles */
+.jumbotron {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.jumbotron__content {
+  color: white;
+  max-width: 80%;
+  z-index: 1;
+}
+
+.jumbotron h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.jumbotron p {
+  font-size: 1rem;
+}
+.loading-indicator {
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error-message {
+  color: red;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Restaurant list styles */
+.restaurants {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Ubah layout untuk layar kecil */
+  gap: 20px;
+  padding: 20px 0;
+  margin: 0 16px; /* Atur margin untuk layar kecil */
+}
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.restaurant:hover {
+  transform: translateY(-5px);
+}
+
+.restaurant img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+  transition: transform 0.3s ease;
+}
+
+.restaurant:hover img {
+  transform: scale(1.1);
+}
+
+.restaurant h3 {
+  margin: 10px;
+  font-size: 1.2rem; /* Ubah ukuran font untuk layar kecil */
+  color: #333;
+}
+
+.restaurant p {
+  margin: 0 10px 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+  padding: 16px;
+}
+
+footer p {
+  text-align: center;
+  color: #aaaaaa;
+}
+
+footer p a {
+  color: #db0000;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 650px) {
+  .app-bar {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .app-bar__menu button {
+    display: none;
+  }
+
+  .nav {
+    left: 0;
+    width: auto;
+    position: static;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__list {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav__item {
+    margin: 0;
+  }
+
+  .restaurants {
+    grid-template-columns: repeat(2, 1fr); /* Ubah layout untuk layar medium */
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .restaurants {
+    grid-template-columns: repeat(3, 1fr); /* Ubah layout untuk layar besar */
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .restaurants {
+    grid-template-columns: repeat(4, 1fr); /* Ubah layout untuk layar ekstra besar */
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .restaurants {
+    grid-template-columns: repeat(5, 1fr); /* Ubah layout untuk layar sangat besar */
+  }
+
+  .jumbotron h2 {
+    font-size: 3rem; /* Kembalikan ukuran font untuk layar besar */
+  }
+
+  .jumbotron p {
+    font-size: 1.5rem; /* Kembalikan ukuran font untuk layar besar */
+  }
+}
+/* Media queries untuk background hero image */
+@media (max-width: 600px) {
+  .jumbotron {
+    background-image: url("../public/images/heros/hero-image_4-small.jpg");
+  }
+}
+
+@media (min-width: 601px) {
+  .jumbotron {
+    background-image: url("../public/images/heros/hero-image_4-large.jpg");
+  }
+}
